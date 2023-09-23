@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Component/Layout/Layout";
-import Home from "../Component/Home/Home";
+import Home from "../Component/Pages/Home/Home";
 
 const router = createBrowserRouter([
   {

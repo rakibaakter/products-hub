@@ -1,8 +1,6 @@
-import React from "react";
-
 const Home = () => {
   return (
-    <div>
+    <div className="py-12 px-4 md:px-8 lg:mx-14 ">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
           <img
