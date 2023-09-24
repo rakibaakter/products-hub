@@ -5,6 +5,10 @@ import Layout from "../Component/Layout/Layout";
 import Home from "../Component/Pages/Home/Home";
 import ProductContainer from "../Component/Pages/Products/ProductsContainer/ProductContainer";
 import ProductDetails from "../Component/Pages/Products/ProductsContainer/ProductDetails";
+import DashboardLayout from "../Component/Pages/Dashboard/DashboardLayout/DashboardLayout";
+import MainDashBoard from "../Component/Pages/Dashboard/MainDashboard/MainDashBoard";
+import Profile from "../Component/Pages/Dashboard/Profile/Profile";
+import EditProfile from "../Component/Pages/Dashboard/EditProfile/EditProfile";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <div>dashboards</div>,
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "/dashboard",
+            element: <MainDashBoard />,
+          },
+          {
+            path: "/dashboard/profile",
+            element: <Profile />,
+          },
+          {
+            path: "/dashboard/editprofile",
+            element: <EditProfile />,
+          },
+        ],
       },
     ],
   },
