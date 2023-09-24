@@ -1,8 +1,9 @@
-// import React from "react";
-// import ReactDOM from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Component/Layout/Layout";
 import Home from "../Component/Pages/Home/Home";
+import ProductContainer from "../Component/Pages/Products/ProductsContainer/ProductContainer";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/product",
-        element: <div>products</div>,
+        loader: () => fetch(`https://dummyjson.com/products`),
+        element: <ProductContainer />,
       },
       {
         path: "/dashboard",
