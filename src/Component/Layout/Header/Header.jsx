@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 const Header = () => {
   return (
     <header className="py-6 shadow-lg">
@@ -5,13 +7,18 @@ const Header = () => {
         <h2 className="text-3xl font-bold">Products Hub</h2>
         <ul className="flex gap-6 text-xl font-medium">
           <li>
-            <a href="/">Home</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="/product">Products</a>
+            <NavLink to="/product">Products</NavLink>
           </li>
           <li>
-            <a href="/dashboard">Dashboard</a>
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
         </ul>
       </nav>
